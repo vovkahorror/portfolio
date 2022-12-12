@@ -1,0 +1,10 @@
+.nav {
+  width: 300px;
+  border: 1px solid;
+}
+
+.navList {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
