@@ -5,9 +5,9 @@ const Nav = () => {
     return (
         <nav className={styles.navBlock}>
             <ul className={styles.navList}>
-                <li><a href="">Main</a></li>
-                <li><a href="">Skills</a></li>
-                <li><a href="">Projects</a></li>
+                <li><a href="#main">Main</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="">Contacts</a></li>
             </ul>
         </nav>
