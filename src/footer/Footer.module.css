@@ -1,0 +1,25 @@
+.footerBlock {
+  background-color: #8dffff;
+}
+
+.footerContainer {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.title {
+  background-color: #ffc9b1;
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  border: 1px solid;
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    gap: 20px;
+  }
+}
