@@ -13,6 +13,15 @@
 }
 
 .skills {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
   border: 1px solid;
+}
+
+@media (max-width: 768px) {
+  .skills {
+    justify-content: center;
+  }
 }
