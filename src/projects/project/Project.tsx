@@ -9,7 +9,9 @@ type ProjectPropsType = {
 const Project: FC<ProjectPropsType> = ({title, description}) => {
     return (
         <div className={styles.project}>
-            <div className={styles.coverImage}></div>
+            <div className={styles.coverImage}>
+                <a className={styles.projectLink} href="">Watch</a>
+            </div>
             <h3>{title}</h3>
             <span className={styles.description}>{description}</span>
         </div>
