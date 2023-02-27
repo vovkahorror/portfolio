@@ -16,7 +16,6 @@
     border: 1px solid;
 }
 
-
 @media (max-width: 895px) {
     .projects {
         justify-content: center;
