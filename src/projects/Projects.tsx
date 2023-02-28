@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from './Projects.module.css';
 import styleContainer from './../common/styles/Container.module.css';
-import Project from "./project/Project";
-import {v1} from "uuid";
+import Project from './project/Project';
+import {v1} from 'uuid';
+import {Title} from '../common/components/title/Title';
 
 const Projects = () => {
     const projects = [
@@ -19,7 +20,7 @@ const Projects = () => {
     return (
         <div className={styles.projectsBlock} id={'projects'}>
             <div className={`${styleContainer.container} ${styles.projectsContainer}`}>
-                <h2 className={styles.title}>Projects</h2>
+                <Title>Projects</Title>
                 <div className={styles.projects}>
                     {projects.map(project => <Project key={v1()} title={project.title}
                                                       description={project.description}/>)}

@@ -1,27 +1,23 @@
 .skillsBlock {
-  height: 100vh;
-  background-color: #cfffc8;
+    height: 100vh;
+    background-color: #cfffc8;
 }
 
 .skillsContainer {
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.title {
-  background-color: #fffcbe;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .skills {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    border: 1px solid;
 }
 
 @media (max-width: 768px) {
-  .skills {
-    justify-content: center;
-  }
+    .skills {
+        justify-content: center;
+    }
 }
