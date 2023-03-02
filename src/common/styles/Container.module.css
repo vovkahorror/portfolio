@@ -1,17 +1,17 @@
 .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin: 0 auto;
-  width: 80%;
-  height: 100%;
-  border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+    border: 1px solid;
 }
 
 @media (max-width: 768px) {
-  .container {
-    justify-content: center;
-  }
+    .container {
+        justify-content: center;
+    }
 }
