@@ -10,7 +10,7 @@ const Skill: FC<SkillPropsType> = ({title, description}) => {
     return (
         <div className={styles.skill}>
             <div className={styles.icon}></div>
-            <h3>{title}</h3>
+            <h3 className={styles.title}>{title}</h3>
             <span className={styles.description}>{description}</span>
         </div>
     );

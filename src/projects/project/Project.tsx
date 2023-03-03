@@ -12,7 +12,7 @@ const Project: FC<ProjectPropsType> = ({title, description}) => {
             <div className={styles.coverImage}>
                 <a className={styles.projectLink} href="">Watch</a>
             </div>
-            <h3>{title}</h3>
+            <h3 className={styles.title}>{title}</h3>
             <span className={styles.description}>{description}</span>
         </div>
     );
