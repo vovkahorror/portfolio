@@ -3,7 +3,7 @@ import styles from './Projects.module.css';
 import styleContainer from './../common/styles/Container.module.css';
 import Project from './project/Project';
 import {v1} from 'uuid';
-import {Title} from '../common/components/title/Title';
+import Title from '../common/components/title/Title';
 
 const Projects = () => {
     const projects = [

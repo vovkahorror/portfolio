@@ -3,7 +3,7 @@ import styles from './Skills.module.css';
 import styleContainer from './../common/styles/Container.module.css';
 import Skill from './skill/Skill';
 import {v1} from 'uuid';
-import {Title} from '../common/components/title/Title';
+import Title from '../common/components/title/Title';
 
 const Skills = () => {
     const skills = [

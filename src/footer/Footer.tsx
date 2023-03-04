@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Footer.module.css';
 import styleContainer from './../common/styles/Container.module.css';
-import FooterContacts from "./footerContacts/FooterContacts";
-import {v1} from "uuid";
+import FooterContacts from './footerContacts/FooterContacts';
+import {v1} from 'uuid';
 
 const Footer = () => {
     const footerContacts = [
@@ -31,7 +31,7 @@ const Footer = () => {
     return (
         <div className={styles.footerBlock}>
             <div className={`${styleContainer.container} ${styles.footerContainer}`}>
-                <h2 className={styles.title}>Volodymyr Yaremchak</h2>
+                <h2 className={styles.footerTitle}>Volodymyr Yaremchak</h2>
                 <div className={styles.contacts}>
                     {footerContacts.map(contact => <FooterContacts key={v1()} link={contact.link}
                                                                    imgSrc={contact.imgSrc} alt={contact.alt}/>)}
