@@ -5,7 +5,7 @@ const Project: FC<ProjectPropsType> = ({title, description}) => {
     return (
         <div className={styles.project}>
             <div className={styles.coverImage}>
-                <a className={styles.projectLink} href="">Watch</a>
+                <a className={styles.projectLink} href=".">Watch</a>
             </div>
             <h3 className={styles.projectTitle}>{title}</h3>
             <span className={styles.description}>{description}</span>
