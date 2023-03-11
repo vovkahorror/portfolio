@@ -11,9 +11,9 @@
 .projects {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
-    border: 1px solid;
 }
 
 @media (max-width: 895px) {

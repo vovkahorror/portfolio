@@ -7,8 +7,10 @@ const Project: FC<ProjectPropsType> = ({title, description}) => {
             <div className={styles.coverImage}>
                 <a className={styles.projectLink} href=".">Watch</a>
             </div>
-            <h3 className={styles.projectTitle}>{title}</h3>
-            <span className={styles.description}>{description}</span>
+            <div className={styles.projectInfo}>
+                <h3 className={styles.projectTitle}>{title}</h3>
+                <span className={styles.description}>{description}</span>
+            </div>
         </div>
     );
 };

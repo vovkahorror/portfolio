@@ -5,15 +5,15 @@
     flex-wrap: wrap;
     width: 350px;
     text-align: center;
-    background-color: #ebe4ff;
+    background-color: #252527;
 }
 
 .coverImage {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     background-color: darkcyan;
 }
 
@@ -23,13 +23,23 @@
     background-color: #8affb9;
 }
 
+.projectInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px 20px;
+}
+
 .projectTitle {
     font-size: 16px;
     letter-spacing: 1px;
 }
 
 .description {
-
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #ffffff;
 }
 
 @media (max-width: 768px) {

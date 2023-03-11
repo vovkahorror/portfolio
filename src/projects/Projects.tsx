@@ -4,6 +4,8 @@ import styleContainer from './../common/styles/Container.module.css';
 import Project from './project/Project';
 import {v1} from 'uuid';
 import Title from '../common/components/title/Title';
+import socialNetworkImage from '../assets/images/social-network.jpg';
+import todolistImage from '../assets/images/to-do-list.png';
 
 const Projects = () => {
     const projects = [
