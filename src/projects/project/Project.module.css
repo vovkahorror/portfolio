@@ -9,18 +9,31 @@
 }
 
 .coverImage {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 350px;
     height: 350px;
-    background-color: darkcyan;
+    background-position: center;
+    background-size: cover;
+}
+
+.coverImage::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .projectLink {
     padding: 10px;
     border: 1px solid;
     background-color: #8affb9;
+    z-index: 1;
 }
 
 .projectInfo {

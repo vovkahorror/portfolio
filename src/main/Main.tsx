@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Main.module.css';
-import styleContainer from './../common/styles/Container.module.css'
+import styleContainer from './../common/styles/Container.module.css';
 
 const Main = () => {
     return (
@@ -9,7 +9,7 @@ const Main = () => {
                 <div className={styles.greeting}>
                     <span>Hi there</span>
                     <h1>I am Volodymyr Yaremchak</h1>
-                    <p>Frontend developer</p>
+                    <p>A Frontend Developer</p>
                 </div>
                 <div className={styles.photo}></div>
             </div>

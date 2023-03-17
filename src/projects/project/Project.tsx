@@ -1,10 +1,10 @@
 import React, {FC} from 'react';
 import styles from './Project.module.css';
 
-const Project: FC<ProjectPropsType> = ({title, description}) => {
+const Project: FC<ProjectPropsType> = ({title, description, style}) => {
     return (
         <div className={styles.project}>
-            <div className={styles.coverImage}>
+            <div className={styles.coverImage} style={style}>
                 <a className={styles.projectLink} href=".">Watch</a>
             </div>
             <div className={styles.projectInfo}>
@@ -18,6 +18,7 @@ const Project: FC<ProjectPropsType> = ({title, description}) => {
 type ProjectPropsType = {
     title: string;
     description: string;
+    style: { backgroundImage: string }
 }
 
 export default Project;
