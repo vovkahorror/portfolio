@@ -4,7 +4,6 @@
     align-items: center;
     flex-wrap: wrap;
     width: 350px;
-    text-align: center;
     background-color: #252527;
 }
 
@@ -31,9 +30,15 @@
 
 .projectLink {
     padding: 10px;
-    border: 1px solid;
-    background-color: #8affb9;
+    background-color: #252527;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    text-decoration: none;
     z-index: 1;
+}
+
+.projectLink:hover {
+    text-decoration: underline;
 }
 
 .projectInfo {

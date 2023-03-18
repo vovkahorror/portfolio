@@ -22,6 +22,7 @@
 @media (max-width: 895px) {
     .projects {
         justify-content: center;
+        gap: 15px;
     }
 }
 
