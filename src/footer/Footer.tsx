@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './Footer.module.css';
-import styleContainer from './../common/styles/Container.module.css';
+import styles from './Footer.module.scss';
+import styleContainer from '../common/styles/Container.module.scss';
 import FooterContacts from './footerContacts/FooterContacts';
 import {v1} from 'uuid';
 

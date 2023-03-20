@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import styles from './Project.module.css';
+import styles from './Project.module.scss';
 
 const Project: FC<ProjectPropsType> = ({title, description, style}) => {
     return (

@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import styles from './FooterContacts.module.css'
+import styles from './FooterContacts.module.scss';
 
 type SocialNetworkPropsType = {
     link: string;
