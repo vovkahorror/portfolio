@@ -1,0 +1,11 @@
+@import './common/styles/sass/variables';
+
+.App {
+  & > *:nth-child(odd) {
+    background-color: $backgroundColor;
+  }
+
+  & > *:nth-child(even) {
+    background-color: $backgroundSecondColor;
+  }
+}
