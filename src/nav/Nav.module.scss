@@ -1,9 +1,20 @@
-.navBlock {
-  width: 300px;
-}
+@import '../common/styles/sass/mixins';
 
 .navList {
   display: flex;
   justify-content: space-between;
+  gap: 40px;
   list-style-type: none;
+
+  & li a {
+    @include text($fontSize: 18px);
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
+
+

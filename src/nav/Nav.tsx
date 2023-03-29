@@ -3,7 +3,7 @@ import styles from './Nav.module.scss';
 
 const Nav = () => {
     return (
-        <nav className={styles.navBlock}>
+        <nav>
             <ul className={styles.navList}>
                 <li><a href="#main">Main</a></li>
                 <li><a href="#skills">Skills</a></li>

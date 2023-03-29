@@ -1,6 +1,8 @@
 .header {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
   height: 80px;
+
+  .headerContainer {
+    display: flex;
+    justify-content: flex-end;
+  }
 }

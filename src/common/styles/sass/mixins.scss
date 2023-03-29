@@ -1,6 +1,6 @@
 @import './variables';
 
-@mixin text($fontFamily, $fontSize, $lineHeight: 1.2) {
+@mixin text($fontFamily: 'Josefin Sans', $fontSize: 16px, $lineHeight: 1.2) {
   font-family: $fontFamily, sans-serif;
   font-size: $fontSize;
   line-height: $lineHeight;
