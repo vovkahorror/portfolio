@@ -1,18 +1,59 @@
+@import '../common/styles/sass/mixins';
+
 .mainBlock {
-  height: 100vh;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+
+  .greetingContainer {
+    flex-wrap: nowrap;
+    gap: 20px;
+
+    .greeting {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      @include text('Poppins', 14px, 1.8);
+
+      h1 {
+        font-size: 50px;
+
+        @media (max-width: 768px) {
+          font-size: 40px;
+        }
+      }
+
+      .profession {
+        font-size: 27px;
+
+        @media (max-width: 768px) {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .photo {
+      width: 300px;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+
+      @media (max-width: 992px) {
+        width: 400px;
+        height: 500px;
+      }
+
+      @media (max-width: 768px) {
+        width: 250px;
+        height: 350px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+  }
 }
 
-.greeting {
-  width: 500px;
-  background-color: #fffbe0;
-}
-
-.title {
-  font-size: 50px;
-}
-
-.photo {
-  width: 300px;
-  height: 400px;
-  background-color: #fffbe0;
-}

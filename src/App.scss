@@ -1,11 +1,21 @@
 @import './common/styles/sass/variables';
 
 .App {
+  > * {
+    padding: 100px 0;
+  }
+
   & > *:nth-child(odd) {
     background-color: $backgroundColor;
   }
 
   & > *:nth-child(even) {
     background-color: $backgroundSecondColor;
+  }
+
+  @media (max-width: 768px) {
+    > * {
+      padding: 80px 0;
+    }
   }
 }

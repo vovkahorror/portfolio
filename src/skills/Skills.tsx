@@ -12,7 +12,7 @@ const Skills = () => {
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque iure repellat vero!',
         },
         {
-            title: 'TypeScript/Javascript',
+            title: 'TypeScript/JavaScript',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque iure repellat vero!',
         },
         {
