@@ -1,22 +1,46 @@
+@import '../../common/styles/sass/variables';
+@import '../../common/styles/sass/mixins';
+
 .skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-    text-align: center;
-    background-color: #ebe4ff;
-}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 15px;
+  max-width: 380px;
+  text-align: center;
 
-.icon {
-    width: 60px;
-    height: 60px;
-    background-color: darkcyan;
-}
+  .iconWrapper {
+    filter: drop-shadow(0 0 4px #000000);
 
-.skillTitle {
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+      width: 114px;
+      height: 114px;
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      background: rgba(255, 255, 255, 0.1);
+
+      & * {
+        width: 40%;
+        height: 40%;
+        color: $primaryColor;
+      }
+    }
+  }
+
+  .skillTitle {
+    margin-bottom: 15px;
     font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  .description {
+    @include text('Poppins', 14px, 1.8);
+  }
 }
 
-.description {
 
-}
+
+

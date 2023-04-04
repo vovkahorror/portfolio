@@ -1,34 +1,33 @@
 .contactsBlock {
-    min-height: 100vh;
-    background-color: #fff089;
+  min-height: 100vh;
 }
 
 .contactsContainer {
-    flex-direction: column;
-    justify-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 400px;
-    background-color: #ceffca;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 400px;
+  background-color: #ceffca;
 }
 
 .form input,
 .form textarea {
-    padding: 10px;
-    resize: none;
+  padding: 10px;
+  resize: none;
 }
 
 .button {
-    padding: 10px;
-    cursor: pointer;
+  padding: 10px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    .form {
-        width: 100%;
-    }
+  .form {
+    width: 100%;
+  }
 }

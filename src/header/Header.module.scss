@@ -1,6 +1,10 @@
 .header {
+  position: sticky;
+  top: 0;
   height: 80px;
   padding: 0;
+  background-color: rgba(31, 31, 32, 0.9);
+  z-index: 10;
 
   .headerContainer {
     display: flex;

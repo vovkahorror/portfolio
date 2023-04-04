@@ -10,7 +10,7 @@ import {
     SiHtml5,
     SiJavascript, SiMui, SiPostman,
     SiReact,
-    SiReacthookform,
+    SiReacthookform, SiReactrouter,
     SiRedux,
     SiSass, SiStorybook,
     SiTypescript,
@@ -25,7 +25,7 @@ const Skills = () => {
             icon: <SiReact/>,
         },
         {
-            title: 'Redux',
+            title: 'Redux / Redux Toolkit',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque iure repellat vero!',
             icon: <SiRedux/>,
         },
@@ -58,6 +58,11 @@ const Skills = () => {
             title: 'Axios',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque iure repellat vero!',
             icon: <SiAxios/>,
+        },
+        {
+            title: 'React Router',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque iure repellat vero!',
+            icon: <SiReactrouter/>,
         },
         {
             title: 'Material UI',
@@ -96,7 +101,8 @@ const Skills = () => {
             <div className={`${styleContainer.container} ${styles.skillsContainer}`}>
                 <Title>Skills</Title>
                 <div className={styles.skills}>
-                    {skills.map(skill => <Skill key={v1()} title={skill.title} description={skill.description}/>)}
+                    {skills.map(skill => <Skill key={v1()} title={skill.title}
+                                                description={skill.description} icon={skill.icon}/>)}
                 </div>
             </div>
         </div>
