@@ -97,7 +97,7 @@ const Skills = () => {
     ];
 
     return (
-        <div className={styles.skillsBlock} id={'skills'}>
+        <section className={styles.skillsBlock} id={'skills'}>
             <div className={`${styleContainer.container} ${styles.skillsContainer}`}>
                 <Title>Skills</Title>
                 <div className={styles.skills}>
@@ -105,7 +105,7 @@ const Skills = () => {
                                                 description={skill.description} icon={skill.icon}/>)}
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

@@ -6,7 +6,7 @@ import Title from '../common/components/title/Title';
 
 const Contacts = () => {
     return (
-        <div className={styles.contactsBlock} id={'contacts'}>
+        <section className={styles.contactsBlock} id={'contacts'}>
             <div className={`${styleContainer.container} ${styles.contactsContainer}`}>
                 <Title>Contacts</Title>
                 <form className={styles.form} id={'contactsForm'} action="#">
@@ -16,7 +16,7 @@ const Contacts = () => {
                 </form>
                 <button className={styles.button} form={'contactsForm'}>Submit</button>
             </div>
-        </div>
+        </section>
     );
 };
 

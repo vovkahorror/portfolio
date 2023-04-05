@@ -26,7 +26,7 @@ const Projects = () => {
     ];
 
     return (
-        <div className={styles.projectsBlock} id={'projects'}>
+        <section className={styles.projectsBlock} id={'projects'}>
             <div className={`${styleContainer.container} ${styles.projectsContainer}`}>
                 <Title>Projects</Title>
                 <div className={styles.projects}>
@@ -34,7 +34,7 @@ const Projects = () => {
                                                       description={project.description} style={project.style}/>)}
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

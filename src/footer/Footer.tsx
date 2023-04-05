@@ -29,7 +29,7 @@ const Footer = () => {
     ];
 
     return (
-        <div className={styles.footerBlock}>
+        <footer className={styles.footerBlock}>
             <div className={`${styleContainer.container} ${styles.footerContainer}`}>
                 <h2 className={styles.footerTitle}>Volodymyr Yaremchak</h2>
                 <div className={styles.contacts}>
@@ -38,7 +38,7 @@ const Footer = () => {
                 </div>
                 <span>2023</span>
             </div>
-        </div>
+        </footer>
     );
 };
 

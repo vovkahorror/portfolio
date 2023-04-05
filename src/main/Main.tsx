@@ -5,7 +5,7 @@ import photo from '../assets/images/photo.jpg';
 
 const Main = () => {
     return (
-        <div className={styles.mainBlock} id={'main'}>
+        <section className={styles.mainBlock} id={'main'}>
             <div className={`${styleContainer.container} ${styles.greetingContainer}`}>
                 <div className={styles.greeting}>
                     <span>Hi there</span>
@@ -14,7 +14,7 @@ const Main = () => {
                 </div>
                 <div className={styles.photo} style={{backgroundImage: `url(${photo})`}}></div>
             </div>
-        </div>
+        </section>
     );
 };
 

@@ -5,11 +5,11 @@
     padding: 100px 0;
   }
 
-  & > div:nth-child(odd) {
+  & > *:nth-child(odd) {
     background-color: $backgroundColor;
   }
 
-  & > div:nth-child(even) {
+  & > *:nth-child(even) {
     background-color: $backgroundSecondColor;
   }
 
