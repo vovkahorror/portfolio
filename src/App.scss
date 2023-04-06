@@ -5,6 +5,10 @@
     padding: 100px 0;
   }
 
+  & > header:nth-child(1) {
+    background-color: rgba(31, 31, 32, 0.9);
+  }
+
   & > *:nth-child(odd) {
     background-color: $backgroundColor;
   }
