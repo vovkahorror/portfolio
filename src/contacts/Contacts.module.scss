@@ -1,33 +1,79 @@
+@import '../common/styles/sass/variables';
+@import '../common/styles/sass/mixins';
+
 .contactsBlock {
-  min-height: 100vh;
-}
-
-.contactsContainer {
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.form {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 400px;
-  background-color: #ceffca;
-}
+  justify-content: center;
+  align-items: center;
 
-.form input,
-.form textarea {
-  padding: 10px;
-  resize: none;
-}
+  .contactsContainer {
+    flex-direction: column;
+    justify-content: flex-start;
 
-.button {
-  padding: 10px;
-  cursor: pointer;
-}
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 570px;
 
-@media (max-width: 768px) {
-  .form {
-    width: 100%;
+
+      & input {
+        padding: 0 15px;
+        min-height: 32px;
+      }
+
+      & textarea {
+        min-height: 160px;
+        padding: 15px;
+        resize: vertical;
+      }
+
+      & input, & textarea {
+        @include text('Poppins', 12px, 1.5);
+        height: auto;
+        background-color: $backgroundSecondColor;
+        border: 1px solid #4a4a4a;
+        outline: none;
+        color: #495057;
+      }
+
+      .button {
+        @include text('Poppins', 14px, 1.2);
+        position: relative;
+        align-self: center;
+        padding: 7px 20px;
+        width: max-content;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        z-index: 0;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: 0 auto;
+          height: 10px;
+          width: 50%;
+          background: #4e93e6;
+          z-index: -1;
+          transition: all 0.2s ease-in-out 0s;
+        }
+
+        &:hover::after {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
   }
 }
