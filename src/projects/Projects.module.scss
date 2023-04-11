@@ -1,33 +1,27 @@
-.projectsBlock {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #1f1f20;
-}
+@import '../common/styles/sass/variables';
 
-.projectsContainer {
+.projectsBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $backgroundColor;
+
+  .projectsContainer {
     flex-direction: column;
     justify-content: flex-start;
-}
 
-.projects {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-@media (max-width: 895px) {
     .projects {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+
+      @media (max-width: 992px) {
         justify-content: center;
         gap: 15px;
+      }
     }
-}
-
-@media (max-width: 768px) {
-    .projects {
-        justify-content: center;
-    }
+  }
 }

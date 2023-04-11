@@ -1,22 +1,24 @@
-.title {
-    position: relative;
-}
+@import '../../styles/sass/variables';
 
-.title h2 {
+.title {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -29px;
+    left: 50%;
+    background: $primaryColor;
+    width: 55px;
+    height: 1px;
+    transform: translate(-50%, 50%);
+  }
+
+  & h2 {
     font-size: 36px;
     font-weight: 500;
     line-height: 1.2;
     text-transform: capitalize;
     letter-spacing: 5px;
-}
-
-.title::before {
-    content: '';
-    position: absolute;
-    bottom: -29px;
-    left: 50%;
-    background: #4e93e6;
-    width: 55px;
-    height: 1px;
-    transform: translate(-50%, 50%);
+  }
 }
