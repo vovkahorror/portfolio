@@ -8,11 +8,26 @@
 
   & li a {
     @include text($fontSize: 18px);
+    position: relative;
     text-transform: uppercase;
     text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 0;
+      width: 100%;
+      background: transparent;
+      z-index: -1;
+      transition: all 0.2s ease-in-out 0s;
+    }
+
+    &:hover::after {
+      height: 6px;
+      background: #4e93e6;
     }
 
     @media (max-width: 768px) {

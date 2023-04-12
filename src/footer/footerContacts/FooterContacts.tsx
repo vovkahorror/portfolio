@@ -1,18 +1,17 @@
-import React, {FC} from 'react';
+import React, {FC, ReactNode} from 'react';
 import styles from './FooterContacts.module.scss';
 
-type SocialNetworkPropsType = {
-    link: string;
-    imgSrc: string;
-    alt: string;
-}
-
-const FooterContacts: FC<SocialNetworkPropsType> = ({link, imgSrc, alt}) => {
+const FooterContacts: FC<SocialNetworksPropsType> = ({link, icon}) => {
     return (
         <a className={styles.link} href={link}>
-            <img className={styles.image} src={imgSrc} alt={alt}/>
+            {icon}
         </a>
     );
 };
+
+type SocialNetworksPropsType = {
+    link: string;
+    icon: ReactNode;
+}
 
 export default FooterContacts;

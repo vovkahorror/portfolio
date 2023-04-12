@@ -1,27 +1,32 @@
+@import '../common/styles/sass/mixins';
+
 .footerBlock {
+  padding: 30px 0;
 
-}
-
-.footerContainer {
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.footerTitle {
-  font-size: 22px;
-  letter-spacing: 3px;
-  background-color: #ffc9b1;
-}
-
-.contacts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  border: 1px solid;
-}
-
-@media (max-width: 768px) {
-  .contacts {
+  .footerContainer {
+    flex-direction: column;
+    justify-content: center;
     gap: 20px;
+
+    .footerTitle {
+      font-size: 22px;
+      letter-spacing: 3px;
+      text-align: center;
+    }
+
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      @media (max-width: 768px) {
+        gap: 20px;
+      }
+    }
+
+    .year {
+      @include text('Poppins', 14px, 1.8);
+      color: rgba(255, 255, 255, .5);
+    }
   }
 }

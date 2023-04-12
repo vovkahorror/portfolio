@@ -3,28 +3,30 @@ import styles from './Footer.module.scss';
 import styleContainer from '../common/styles/Container.module.scss';
 import FooterContacts from './footerContacts/FooterContacts';
 import {v1} from 'uuid';
+import {SiGithub, SiGmail, SiLinkedin} from 'react-icons/si';
+import {BsFillTelephoneOutboundFill} from 'react-icons/bs';
 
 const Footer = () => {
     const footerContacts = [
         {
-            link: '',
-            imgSrc: '',
-            alt: 'GitHub',
+            link: 'https://github.com/vovkahorror',
+            icon: <SiGithub/>,
+            title: 'vovkahorror',
         },
         {
             link: '',
-            imgSrc: '',
-            alt: 'LinkedIn',
+            icon: <SiLinkedin/>,
+            title: 'LinkedIn',
         },
         {
-            link: '',
-            imgSrc: '',
-            alt: 'mail',
+            link: 'mailto:vovkahorror@gmail.com',
+            icon: <SiGmail/>,
+            title: 'vovkahorror@gmail.com',
         },
         {
-            link: '',
-            imgSrc: '',
-            alt: 'phone',
+            link: 'tel:+380502748009',
+            icon: <BsFillTelephoneOutboundFill/>,
+            title: '+380502748009',
         },
     ];
 
@@ -34,9 +36,9 @@ const Footer = () => {
                 <h2 className={styles.footerTitle}>Volodymyr Yaremchak</h2>
                 <div className={styles.contacts}>
                     {footerContacts.map(contact => <FooterContacts key={v1()} link={contact.link}
-                                                                   imgSrc={contact.imgSrc} alt={contact.alt}/>)}
+                                                                   icon={contact.icon}/>)}
                 </div>
-                <span>2023</span>
+                <span className={styles.year}>2023</span>
             </div>
         </footer>
     );
