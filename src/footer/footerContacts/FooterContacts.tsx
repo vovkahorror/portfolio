@@ -3,7 +3,7 @@ import styles from './FooterContacts.module.scss';
 
 const FooterContacts: FC<SocialNetworksPropsType> = ({link, icon}) => {
     return (
-        <a className={styles.link} href={link}>
+        <a className={styles.link} href={link} target={'_blank'}>
             {icon}
         </a>
     );
