@@ -1,8 +1,9 @@
 @import '../common/styles/sass/mixins';
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
   height: 80px;
   padding: 0;
   z-index: 10;

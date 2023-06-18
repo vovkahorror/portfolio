@@ -7,28 +7,11 @@
   list-style-type: none;
 
   & li a {
-    @include text($fontSize: 18px);
     position: relative;
     text-transform: uppercase;
     text-decoration: none;
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 0;
-      width: 100%;
-      background: transparent;
-      z-index: -1;
-      transition: all 0.2s ease-in-out 0s;
-    }
-
-    &:hover::after {
-      height: 6px;
-      background: #4e93e6;
-    }
+    @include button($underlineHeight: 6px);
+    @include text($fontSize: 18px);
 
     @media (max-width: 768px) {
       font-size: 14px;

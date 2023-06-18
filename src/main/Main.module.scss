@@ -2,9 +2,19 @@
 @import '../common/styles/sass/mixins';
 
 .mainBlock {
+  //position: relative;
   display: flex;
   align-items: center;
   min-height: 100vh;
+
+  .particles {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.4;
+  }
 
   .greetingContainer {
     @include container();
@@ -12,6 +22,7 @@
     gap: 20px;
 
     .greeting {
+      position: relative;
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -51,22 +62,45 @@
       }
     }
 
-    .photo {
-      width: 300px;
-      height: 400px;
-      background-size: cover;
-      background-position: center;
+    .photoContainer {
+      position: relative;
+      z-index: 1;
 
-      @media (max-width: 992px) {
+      .photo {
+        position: relative;
         width: 400px;
         height: 500px;
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+
+        @media (max-width: 768px) {
+          width: 250px;
+          height: 350px;
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        left: 8%;
+        top: -8%;
+        height: 110%;
+        width: 102%;
+        border: 5px solid $primaryColor;
+        z-index: -1;
+      }
+
+      @media (max-width: 992px) {
+        margin-top: 40px;
       }
 
       @media (max-width: 768px) {
-        width: 250px;
-        height: 350px;
+        margin-top: 20px;
       }
     }
+
 
     @media (max-width: 992px) {
       flex-direction: column;
