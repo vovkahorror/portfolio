@@ -7,6 +7,7 @@
   min-height: 100vh;
 
   .greetingContainer {
+    @include container();
     flex-wrap: nowrap;
     gap: 20px;
 

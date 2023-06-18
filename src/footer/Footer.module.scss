@@ -4,6 +4,7 @@
   padding: 30px 0;
 
   .footerContainer {
+    @include container();
     flex-direction: column;
     justify-content: center;
     gap: 20px;
