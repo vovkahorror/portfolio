@@ -13,7 +13,7 @@ const Skills = () => {
                 <Fade direction={'up'} triggerOnce>
                     <Title>Skills</Title>
                 </Fade>
-                <Fade direction={'bottom-right'} duration={400} cascade triggerOnce>
+                <Fade direction={'bottom-right'} duration={400} cascade triggerOnce damping={0.3}>
                     <ul className={styles.skills}>
                         {skills.map(skill => <Skill key={v1()} title={skill.title}
                                                     description={skill.description} icon={skill.icon}/>)}

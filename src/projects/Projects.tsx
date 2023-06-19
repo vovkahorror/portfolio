@@ -13,7 +13,7 @@ const Projects = () => {
                 <Fade direction={'up'} triggerOnce>
                     <Title>Projects</Title>
                 </Fade>
-                <Fade direction={'top-left'} duration={600} cascade triggerOnce>
+                <Fade direction={'top-left'} duration={600} cascade triggerOnce damping={0.3}>
                     <ul className={styles.projects}>
                         {projects.map(project => <Project key={v1()} title={project.title}
                                                           description={project.description} style={project.style}/>)}
