@@ -3,7 +3,7 @@ import styles from './Project.module.scss';
 
 const Project: FC<ProjectPropsType> = ({title, description, style}) => {
     return (
-        <div className={styles.project}>
+        <li className={styles.project}>
             <div className={styles.coverImage} style={style}>
                 <a className={styles.projectLink} href=".">Watch</a>
             </div>
@@ -11,7 +11,7 @@ const Project: FC<ProjectPropsType> = ({title, description, style}) => {
                 <h3 className={styles.projectTitle}>{title}</h3>
                 <span className={styles.description}>{description}</span>
             </div>
-        </div>
+        </li>
     );
 };
 

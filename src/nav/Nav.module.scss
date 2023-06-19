@@ -10,8 +10,13 @@
     position: relative;
     text-transform: uppercase;
     text-decoration: none;
-    @include button($underlineHeight: 6px);
+    @include button($underlineHeight: 4px);
     @include text($fontSize: 18px);
+
+    &.active {
+      @include button($underlineHeight: 10px, $underlineWidth: 100%);
+      @include text($fontSize: 18px);
+    }
 
     @media (max-width: 768px) {
       font-size: 14px;

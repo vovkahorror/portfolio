@@ -2,7 +2,6 @@
 @import '../common/styles/sass/mixins';
 
 .mainBlock {
-  //position: relative;
   display: flex;
   align-items: center;
   min-height: 100vh;
@@ -80,8 +79,7 @@
         }
       }
 
-      &:after {
-        content: '';
+      .border {
         position: absolute;
         display: block;
         left: 8%;

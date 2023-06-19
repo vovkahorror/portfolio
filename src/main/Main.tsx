@@ -6,13 +6,14 @@ import type {Engine} from 'tsparticles-engine';
 import {loadLinksPreset} from 'tsparticles-preset-links';
 import {Fade} from 'react-awesome-reveal';
 import ReactTypingEffect from 'react-typing-effect';
+import {Tilt} from 'react-tilt';
 
 const Main = () => {
     const customInit = async (engine: Engine) => {
         await loadLinksPreset(engine);
     };
 
-    const options = {
+    const particlesOptions = {
         preset: 'links',
         background: {
             color: {
@@ -32,9 +33,16 @@ const Main = () => {
         }],
     };
 
+    const tiltOptions = {
+        reverse: true,
+        perspective: 1000,
+        scale: 1,
+        max: 10,
+    };
+
     return (
         <section className={styles.mainBlock} id={'main'}>
-            <Particles options={options} init={customInit} className={styles.particles}/>
+            <Particles options={particlesOptions} init={customInit} className={styles.particles}/>
             <div className={styles.greetingContainer}>
                 <Fade direction={'down'} triggerOnce>
                     <div className={styles.greeting}>
@@ -50,10 +58,13 @@ const Main = () => {
                         </p>
                     </div>
                 </Fade>
+
                 <Fade direction={'up'} triggerOnce>
-                    <div className={styles.photoContainer}>
-                        <div className={styles.photo} style={{backgroundImage: `url(${photo})`}}></div>
-                    </div>
+                    <Tilt options={tiltOptions} className={styles.photoContainer}>
+                        <Tilt options={tiltOptions} className={styles.photo}
+                              style={{backgroundImage: `url(${photo})`}}></Tilt>
+                        <div className={styles.border}></div>
+                    </Tilt>
                 </Fade>
             </div>
         </section>
