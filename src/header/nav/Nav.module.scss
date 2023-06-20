@@ -1,4 +1,4 @@
-@import '../common/styles/sass/mixins';
+@import '../../common/styles/sass/mixins';
 
 .navList {
   display: flex;
@@ -12,19 +12,27 @@
     text-decoration: none;
     @include button($underlineHeight: 4px);
     @include text($fontSize: 18px);
+    white-space: nowrap;
+    transition: all 0.2s ease-in-out 0s;
 
     &.active {
       @include button($underlineHeight: 10px, $underlineWidth: 100%);
-      @include text($fontSize: 18px);
+      @include text($fontSize: 24px);
     }
 
     @media (max-width: 768px) {
       font-size: 14px;
+      padding: 5px;
+
+      &.active {
+        font-size: 18px;
+        padding: 5px;
+      }
     }
   }
 
   @media (max-width: 768px) {
-    gap: 15px;
+    display: none;
   }
 }
 
