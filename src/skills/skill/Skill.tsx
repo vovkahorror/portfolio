@@ -13,6 +13,7 @@ const Skill: FC<SkillPropsType> = ({title, description, icon}) => {
     );
 };
 
+
 type SkillPropsType = {
     title: string;
     description: string;
