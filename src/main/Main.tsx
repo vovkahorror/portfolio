@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {FC, useEffect} from 'react';
 import styles from './Main.module.scss';
 import photo from '../assets/images/photo.jpg';
 import Particles from 'react-particles';
@@ -8,7 +8,7 @@ import {Fade} from 'react-awesome-reveal';
 import ReactTypingEffect from 'react-typing-effect';
 import {Tilt} from 'react-tilt';
 
-const Main = () => {
+const Main: FC<MainPropsType> = ({setIsLoaded}) => {
     const customInit = async (engine: Engine) => {
         await loadLinksPreset(engine);
     };
@@ -45,7 +45,7 @@ const Main = () => {
         image.src = photo;
 
         image.onload = () => {
-            // setIsPhotoLoaded(true);
+            setIsLoaded(true);
         };
 
         return () => {
@@ -84,4 +84,7 @@ const Main = () => {
     );
 };
 
+type MainPropsType = {
+    setIsLoaded: (isLoaded: boolean) => void;
+}
 export default Main;

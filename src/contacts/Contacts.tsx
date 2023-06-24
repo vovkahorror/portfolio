@@ -14,13 +14,13 @@ const Contacts = () => {
                 <Title id={'contacts'}>Contacts</Title>
                 <form ref={ref} className={`${styles.form} ${inView ? styles.inView : ''}`} id={'contactsForm'}
                       action=".">
-                    <Fade duration={600} triggerOnce>
+                    <Fade duration={1000} triggerOnce>
                         <input type={'text'} placeholder={'Name'}/>
                     </Fade>
-                    <Fade duration={1400} triggerOnce>
+                    <Fade duration={1800} triggerOnce>
                         <input type={'email'} placeholder={'E-mail'}/>
                     </Fade>
-                    <Fade duration={2000} triggerOnce>
+                    <Fade duration={2600} triggerOnce>
                         <textarea placeholder={'Your message'}></textarea>
                     </Fade>
                     <Fade triggerOnce>
