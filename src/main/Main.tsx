@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styles from './Main.module.scss';
 import photo from '../assets/images/photo.jpg';
 import Particles from 'react-particles';
@@ -40,6 +40,19 @@ const Main = () => {
         max: 10,
     };
 
+    useEffect(() => {
+        const image = new Image();
+        image.src = photo;
+
+        image.onload = () => {
+            // setIsPhotoLoaded(true);
+        };
+
+        return () => {
+            image.onload = null;
+        };
+    }, []);
+
     return (
         <section className={styles.mainBlock} id={'main'}>
             <Particles options={particlesOptions} init={customInit} className={styles.particles}/>
@@ -48,14 +61,14 @@ const Main = () => {
                     <div className={styles.greeting}>
                         <span>Hi There</span>
                         <h1>I am <br/> <span className={styles.name}>Volodymyr Yaremchak</span></h1>
-                        <p className={styles.profession}>
+                        <div className={styles.profession}>
                             <ReactTypingEffect
                                 text={['A Frontend Developer', 'A React Developer', 'A JavaScript Developer', 'A TypeScript Developer']}
                                 speed={100}
                                 eraseSpeed={100}
                                 eraseDelay={3000}
                                 typingDelay={1000}/>
-                        </p>
+                        </div>
                     </div>
                 </Fade>
 
