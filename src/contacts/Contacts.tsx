@@ -6,7 +6,7 @@ import {useInView} from 'react-intersection-observer';
 
 
 const Contacts = () => {
-    const {ref, inView} = useInView();
+    const {ref, inView} = useInView({threshold: 1});
 
     return (
         <section className={styles.contactsBlock}>
