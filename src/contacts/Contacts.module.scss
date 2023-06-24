@@ -17,8 +17,13 @@
       flex-direction: column;
       gap: 1.1rem;
       width: 800px;
+      opacity: 0;
 
-      & .input, & .textarea {
+      &.inView {
+        opacity: 1;
+      }
+
+      & input, & textarea {
         padding: 15px;
         width: 100%;
         height: auto;
@@ -27,13 +32,9 @@
         border: 1px solid #4a4a4a;
         outline: none;
         color: #495057;
-
-        &.inView {
-          opacity: 1;
-        }
       }
 
-      & .textarea {
+      & textarea {
         min-height: 160px;
         resize: vertical;
       }
@@ -42,11 +43,6 @@
         display: block;
         @include button();
         margin: 0 auto;
-        opacity: 0;
-
-        &.inView {
-          opacity: 1;
-        }
       }
 
       @media (max-width: 768px) {

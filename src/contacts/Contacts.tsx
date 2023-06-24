@@ -6,28 +6,28 @@ import {useInView} from 'react-intersection-observer';
 
 
 const Contacts = () => {
-    const {ref, inView} = useInView({threshold: 1});
+    const {ref, inView} = useInView();
 
     return (
-        <section className={styles.contactsBlock} id={'contacts'}>
+        <section className={styles.contactsBlock}>
             <div className={styles.contactsContainer}>
-                <Title>Contacts</Title>
-                <form ref={ref} className={styles.form} id={'contactsForm'} action=".">
+                <Title id={'contacts'}>Contacts</Title>
+                <form ref={ref} className={`${styles.form} ${inView ? styles.inView : ''}`} id={'contactsForm'}
+                      action=".">
                     <Fade duration={600} triggerOnce>
-                        <input className={`${styles.input} ${inView ? styles.inView : ''}`} placeholder={'Name'}/>
+                        <input type={'text'} placeholder={'Name'}/>
                     </Fade>
                     <Fade duration={1400} triggerOnce>
-                        <input className={`${styles.input} ${inView ? styles.inView : ''}`} type="email"
-                               placeholder={'E-mail'}/>
+                        <input type={'email'} placeholder={'E-mail'}/>
                     </Fade>
                     <Fade duration={2000} triggerOnce>
-                        <textarea className={`${styles.textarea} ${inView ? styles.inView : ''}`}
-                                  placeholder={'Your message'}></textarea>
+                        <textarea placeholder={'Your message'}></textarea>
                     </Fade>
-                    <button className={`${styles.button} ${inView ? styles.inView : ''}`}
-                            form={'contactsForm'}>
-                        Send message
-                    </button>
+                    <Fade triggerOnce>
+                        <button className={styles.button} form={'contactsForm'}>
+                            Send message
+                        </button>
+                    </Fade>
                 </form>
             </div>
         </section>
