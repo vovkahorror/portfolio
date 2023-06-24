@@ -6,13 +6,13 @@ import {useInView} from 'react-intersection-observer';
 
 
 const Contacts = () => {
-    const {ref, inView} = useInView();
+    const {ref, inView} = useInView({threshold: 1});
 
     return (
         <section className={styles.contactsBlock} id={'contacts'}>
             <div className={styles.contactsContainer}>
                 <Title>Contacts</Title>
-                <form className={styles.form} id={'contactsForm'} action=".">
+                <form ref={ref} className={styles.form} id={'contactsForm'} action=".">
                     <Fade duration={600} triggerOnce>
                         <input className={`${styles.input} ${inView ? styles.inView : ''}`} placeholder={'Name'}/>
                     </Fade>
@@ -24,7 +24,7 @@ const Contacts = () => {
                         <textarea className={`${styles.textarea} ${inView ? styles.inView : ''}`}
                                   placeholder={'Your message'}></textarea>
                     </Fade>
-                    <button ref={ref} className={`${styles.button} ${inView ? styles.inView : ''}`}
+                    <button className={`${styles.button} ${inView ? styles.inView : ''}`}
                             form={'contactsForm'}>
                         Send message
                     </button>
