@@ -12,7 +12,7 @@ const Contacts = () => {
         <section className={styles.contactsBlock} id={'contacts'}>
             <div className={styles.contactsContainer}>
                 <Title>Contacts</Title>
-                <form ref={ref} className={styles.form} id={'contactsForm'} action=".">
+                <form className={styles.form} id={'contactsForm'} action=".">
                     <Fade duration={600} triggerOnce>
                         <input className={`${styles.input} ${inView ? styles.inView : ''}`} placeholder={'Name'}/>
                     </Fade>
@@ -24,7 +24,8 @@ const Contacts = () => {
                         <textarea className={`${styles.textarea} ${inView ? styles.inView : ''}`}
                                   placeholder={'Your message'}></textarea>
                     </Fade>
-                    <button className={`${styles.button} ${inView ? styles.inView : ''}`} form={'contactsForm'}>
+                    <button ref={ref} className={`${styles.button} ${inView ? styles.inView : ''}`}
+                            form={'contactsForm'}>
                         Send message
                     </button>
                 </form>
