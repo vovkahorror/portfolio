@@ -1,23 +1,27 @@
 import React from 'react';
 import styles from './Contacts.module.scss';
 import Title from '../common/components/title/Title';
-import {Zoom} from 'react-awesome-reveal';
+import {Fade} from 'react-awesome-reveal';
 
 
 const Contacts = () => {
     return (
         <section className={styles.contactsBlock} id={'contacts'}>
             <div className={styles.contactsContainer}>
-                <Zoom triggerOnce>
-                    <Title>Contacts</Title>
-                </Zoom>
+                <Title>Contacts</Title>
                 <form className={styles.form} id={'contactsForm'} action=".">
-                    <Zoom triggerOnce>
+                    <Fade duration={600} triggerOnce>
                         <input type="text" placeholder={'Name'}/>
+                    </Fade>
+                    <Fade duration={1400} triggerOnce>
                         <input type="email" placeholder={'E-mail'}/>
+                    </Fade>
+                    <Fade duration={2000} triggerOnce>
                         <textarea placeholder={'Your message'}></textarea>
+                    </Fade>
+                    <Fade triggerOnce>
                         <button className={styles.button} form={'contactsForm'}>Send message</button>
-                    </Zoom>
+                    </Fade>
                 </form>
             </div>
         </section>
