@@ -9,18 +9,18 @@ const Contacts = () => {
     const {ref, inView} = useInView({threshold: 1});
 
     return (
-        <section className={styles.contactsBlock}>
+        <section className={styles.contactsBlock} id={'contacts'}>
             <div className={styles.contactsContainer}>
-                <Title id={'contacts'}>Contacts</Title>
+                <Title>Contacts</Title>
                 <form ref={ref} className={`${styles.form} ${inView ? styles.inView : ''}`} id={'contactsForm'}
                       action=".">
-                    <Fade duration={1000} triggerOnce>
+                    <Fade duration={1000} delay={500} triggerOnce>
                         <input type={'text'} placeholder={'Name'}/>
                     </Fade>
-                    <Fade duration={1800} triggerOnce>
+                    <Fade duration={1800} delay={500} triggerOnce>
                         <input type={'email'} placeholder={'E-mail'}/>
                     </Fade>
-                    <Fade duration={2600} triggerOnce>
+                    <Fade duration={2600} delay={500} triggerOnce>
                         <textarea placeholder={'Your message'}></textarea>
                     </Fade>
                     <Fade triggerOnce>

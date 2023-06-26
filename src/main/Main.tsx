@@ -3,6 +3,7 @@ import styles from './Main.module.scss';
 import photo from '../assets/images/photo.jpg';
 import Particles from 'react-particles';
 import type {Engine} from 'tsparticles-engine';
+import {ISourceOptions} from 'tsparticles-engine';
 import {loadLinksPreset} from 'tsparticles-preset-links';
 import {Fade} from 'react-awesome-reveal';
 import ReactTypingEffect from 'react-typing-effect';
@@ -13,7 +14,7 @@ const Main: FC<MainPropsType> = ({setIsLoaded}) => {
         await loadLinksPreset(engine);
     };
 
-    const particlesOptions = {
+    const particlesOptions: ISourceOptions = {
         preset: 'links',
         background: {
             color: {
