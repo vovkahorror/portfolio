@@ -1,9 +1,12 @@
 import React, {FC, ReactNode} from 'react';
 import styles from './Skill.module.scss';
+import {useInView} from 'react-intersection-observer';
 
 const Skill: FC<SkillPropsType> = ({title, description, icon}) => {
+    const {ref, inView} = useInView();
+
     return (
-        <li className={styles.skill}>
+        <li ref={ref} className={`${styles.skill} ${inView ? styles.inView : ''}`}>
             <div className={styles.iconWrapper}>
                 <div className={styles.icon}>{icon}</div>
             </div>

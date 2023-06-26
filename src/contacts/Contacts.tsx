@@ -19,9 +19,7 @@ const Contacts = () => {
                     <Fade duration={2000} triggerOnce>
                         <textarea placeholder={'Your message'}></textarea>
                     </Fade>
-                    <Fade triggerOnce>
-                        <button className={styles.button} form={'contactsForm'}>Send message</button>
-                    </Fade>
+                    <button className={styles.button} form={'contactsForm'}>Send message</button>
                 </form>
             </div>
         </section>
