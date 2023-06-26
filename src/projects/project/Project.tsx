@@ -1,9 +1,12 @@
 import React, {FC} from 'react';
 import styles from './Project.module.scss';
+import {useInView} from 'react-intersection-observer';
 
 const Project: FC<ProjectPropsType> = ({title, description, style}) => {
+    const {ref, inView} = useInView();
+
     return (
-        <li className={styles.project}>
+        <li ref={ref} className={`${styles.project} ${inView ? styles.inView : ''}`}>
             <div className={styles.coverImage} style={style}>
                 <a className={styles.projectLink} href=".">Watch</a>
             </div>

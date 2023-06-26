@@ -9,6 +9,11 @@
   width: 350px;
   background-color: $backgroundSecondColor;
   list-style-type: none;
+  opacity: 0;
+
+  &.inView {
+    opacity: 1;
+  }
 
   .coverImage {
     position: relative;
