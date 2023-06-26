@@ -14,16 +14,16 @@ const Contacts = () => {
                 <Title>Contacts</Title>
                 <form ref={ref} className={`${styles.form} ${inView ? styles.inView : ''}`} id={'contactsForm'}
                       action=".">
-                    <Fade duration={1000} delay={500} triggerOnce>
+                    <Fade delay={300} triggerOnce>
                         <input type={'text'} placeholder={'Name'}/>
                     </Fade>
-                    <Fade duration={1800} delay={500} triggerOnce>
+                    <Fade delay={600} triggerOnce>
                         <input type={'email'} placeholder={'E-mail'}/>
                     </Fade>
-                    <Fade duration={2600} delay={500} triggerOnce>
+                    <Fade delay={900} triggerOnce>
                         <textarea placeholder={'Your message'}></textarea>
                     </Fade>
-                    <Fade triggerOnce>
+                    <Fade delay={1200} triggerOnce>
                         <button className={styles.button} form={'contactsForm'}>
                             Send message
                         </button>
