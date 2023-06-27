@@ -8,8 +8,8 @@ import {Fade} from 'react-awesome-reveal';
 
 const Projects = () => {
     return (
-        <section className={styles.projectsBlock} id={'projects'}>
-            <div className={styles.projectsContainer}>
+        <section className={styles.projectsBlock}>
+            <div className={styles.projectsContainer} id={'projects'}>
                 <Title>Projects</Title>
                 <Fade duration={1200} cascade triggerOnce damping={0.3}>
                     <ul className={styles.projects}>
