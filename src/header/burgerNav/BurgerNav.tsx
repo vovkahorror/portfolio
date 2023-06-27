@@ -4,18 +4,17 @@ import {Link} from 'react-scroll';
 import {Rotate} from 'react-awesome-reveal';
 
 const BurgerNav: FC<BurgerNavPropsType> = ({isOpen, setIsOpen}) => {
+    const toggleBurgerNav = () => setIsOpen(!isOpen);
+
     const linkParams = {
         activeClass: styles.active,
         spy: true,
         smooth: true,
-        offset: -50,
+        offset: 0,
         duration: 500,
         delay: 0,
         isDynamic: true,
-    };
-
-    const toggleBurgerNav = () => {
-        setIsOpen(!isOpen);
+        onClick: toggleBurgerNav,
     };
 
     return (
