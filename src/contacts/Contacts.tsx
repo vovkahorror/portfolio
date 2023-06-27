@@ -9,9 +9,9 @@ const Contacts = () => {
     const {ref, inView} = useInView({threshold: 1, triggerOnce: true});
 
     return (
-        <section className={styles.contactsBlock}>
+        <section className={styles.contactsBlock} id={'contacts'}>
             <div className={styles.contactsContainer}>
-                <Title id={'contacts'}>Contacts</Title>
+                <Title>Contacts</Title>
                 <form ref={ref} className={`${styles.form} ${inView ? styles.inView : ''}`} id={'contactsForm'}
                       action=".">
                     <Fade delay={300} triggerOnce>

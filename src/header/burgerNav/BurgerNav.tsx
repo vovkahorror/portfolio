@@ -8,7 +8,7 @@ const BurgerNav: FC<BurgerNavPropsType> = ({isOpen, setIsOpen}) => {
         activeClass: styles.active,
         spy: true,
         smooth: true,
-        offset: 80,
+        offset: 200,
         duration: 500,
         delay: 0,
         isDynamic: true,
