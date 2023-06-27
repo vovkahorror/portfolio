@@ -6,12 +6,12 @@ import {useInView} from 'react-intersection-observer';
 
 
 const Contacts = () => {
-    const {ref, inView} = useInView({threshold: 1});
+    const {ref, inView} = useInView({threshold: 1, triggerOnce: true});
 
     return (
-        <section className={styles.contactsBlock} id={'contacts'}>
+        <section className={styles.contactsBlock}>
             <div className={styles.contactsContainer}>
-                <Title>Contacts</Title>
+                <Title id={'contacts'}>Contacts</Title>
                 <form ref={ref} className={`${styles.form} ${inView ? styles.inView : ''}`} id={'contactsForm'}
                       action=".">
                     <Fade delay={300} triggerOnce>

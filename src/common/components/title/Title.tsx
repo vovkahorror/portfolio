@@ -2,15 +2,16 @@ import React, {FC, ReactNode} from 'react';
 import styles from './Title.module.scss';
 import {Zoom} from 'react-awesome-reveal';
 
-const Title: FC<TitlePropsType> = ({children}) => {
+const Title: FC<TitlePropsType> = ({id, children}) => {
     return (
         <Zoom triggerOnce className={styles.title}>
-            <h2>{children}</h2>
+            <h2 id={id}>{children}</h2>
         </Zoom>
     );
 };
 
 type TitlePropsType = {
+    id?: string
     children: ReactNode
 }
 
