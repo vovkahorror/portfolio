@@ -9,8 +9,8 @@ const Contacts = () => {
     const {ref, inView} = useInView({threshold: 1});
 
     return (
-        <section className={styles.contactsBlock} id={'contacts'}>
-            <div className={styles.contactsContainer}>
+        <section className={styles.contactsBlock}>
+            <div className={styles.contactsContainer} id={'contacts'}>
                 <Title>Contacts</Title>
                 <form ref={ref} className={`${styles.form} ${inView ? styles.inView : ''}`} id={'contactsForm'}
                       action=".">
