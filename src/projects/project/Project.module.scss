@@ -6,10 +6,13 @@
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  width: 350px;
-  background-color: $backgroundSecondColor;
+  width: 500px;
   list-style-type: none;
   opacity: 0;
+
+  a {
+    text-decoration: none;
+  }
 
   &.inView {
     opacity: 1;
@@ -20,19 +23,42 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 350px;
+    width: 500px;
     height: 350px;
     background-position: center;
-    background-size: cover;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+    background-color: $backgroundSecondColor;
 
-    &::before {
-      position: absolute;
-      content: '';
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: rgba(0, 0, 0, 0.7);
+    &:hover {
+      background-size: auto 120%;
+
+      & .description {
+        opacity: 1;
+        transform: none;
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(2px);
+      }
+    }
+
+    .description {
+      padding: 40px;
+      @include text('Poppins', 16px, 1.8);
+      text-decoration: none;
+      z-index: 2;
+      opacity: 0;
+      transform: translateY(100px);
+      transition: 0.4s;
     }
 
     .projectLink {
@@ -41,10 +67,6 @@
       @include text('Poppins', 16px, 1.8);
       text-decoration: none;
       z-index: 1;
-
-      &:hover {
-        text-decoration: underline;
-      }
     }
 
     @media (max-width: 768px) {
@@ -53,20 +75,13 @@
     }
   }
 
-  .projectInfo {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 25px 20px;
-
-    .projectTitle {
-      font-size: 16px;
-      letter-spacing: 1px;
-    }
-
-    .description {
-      @include text('Poppins', 14px, 1.8);
-    }
+  .projectTitle {
+    margin: 18px auto;
+    @include button($underlineHeight: 4px);
+    @include text($fontSize: 22px);
+    text-transform: none;
+    letter-spacing: 1px;
+    text-decoration: none;
   }
 }
 

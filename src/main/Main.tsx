@@ -8,14 +8,31 @@ import {loadLinksPreset} from 'tsparticles-preset-links';
 import {Fade} from 'react-awesome-reveal';
 import ReactTypingEffect from 'react-typing-effect';
 import {Tilt} from 'react-tilt';
+import {loadSlim} from 'tsparticles-slim';
 
 const Main: FC<MainPropsType> = ({setIsLoaded}) => {
     const customInit = async (engine: Engine) => {
+        await loadSlim(engine);
         await loadLinksPreset(engine);
     };
 
     const particlesOptions: ISourceOptions = {
         preset: 'links',
+        interactivity: {
+            events: {
+                onHover: {
+                    enable: true,
+                    mode: 'repulse',
+                },
+                resize: true,
+            },
+            modes: {
+                repulse: {
+                    distance: 150,
+                    duration: 0.4,
+                },
+            },
+        },
         background: {
             color: {
                 value: '#252527',

@@ -42,7 +42,7 @@
 
       .button {
         display: block;
-        @include button();
+        @include button($underlineHeight: 4px);
         margin: 0 auto;
       }
 
