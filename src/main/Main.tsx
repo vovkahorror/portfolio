@@ -24,12 +24,24 @@ const Main: FC<MainPropsType> = ({setIsLoaded}) => {
                     enable: true,
                     mode: 'repulse',
                 },
+                onClick: {
+                    enable: true,
+                    mode: 'grab',
+                },
                 resize: true,
             },
             modes: {
                 repulse: {
                     distance: 150,
                     duration: 0.4,
+                },
+                grab: {
+                    distance: 400,
+                    links: {
+                        blink: false,
+                        consent: false,
+                        opacity: 1,
+                    },
                 },
             },
         },

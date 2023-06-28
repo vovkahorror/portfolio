@@ -30,6 +30,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    backdrop-filter: none;
 
     &.headerOpen {
       top: unset;
