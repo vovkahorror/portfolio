@@ -16,7 +16,7 @@
     transition: all 0.2s ease-in-out 0s;
 
     &.active {
-      @include button($underlineHeight: 10px, $underlineWidth: 100%);
+      @include button($underlineHeight: 8px, $underlineWidth: 80%);
       @include text($fontSize: 24px);
     }
 

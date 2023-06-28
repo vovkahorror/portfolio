@@ -28,7 +28,7 @@
   }
 }
 
-@mixin button($underlineHeight: 10px, $underlineWidth: 50%) {
+@mixin button($underlineHeight: 10px, $underlineWidth: 40%) {
   @include text('Poppins', 14px, 1.2);
   position: relative;
   align-self: center;
