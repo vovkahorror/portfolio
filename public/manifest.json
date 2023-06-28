@@ -3,14 +3,14 @@
   "name": "Volodymyr Yaremchak's portfolio",
   "icons": [
     {
-      "src": "light-favicon.ico",
+      "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "dark-favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "favicon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
     },
     {
       "src": "logo192.png",
