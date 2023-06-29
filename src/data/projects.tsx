@@ -6,7 +6,7 @@ import momentum from '../assets/images/momentum.webp';
 export const projects = [
     {
         title: 'Connectify',
-        description: 'Social network. You can create your profile, upload your photo, post messages, chat and private messages with other users.',
+        description: 'The social network. You can create your profile, upload your photo, post messages, chat and private messages with other users.',
         image: connectifyImage,
         link: 'https://vovkahorror.github.io/samurai-way/',
     },

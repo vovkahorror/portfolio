@@ -59,27 +59,27 @@ export const skills = {
     assistiveTechnologies: [
         {
             title: 'Axios',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque iure repellat vero!',
+            description: 'A simple promise based HTTP client for the browser and Node.js. On the client it uses XMLHttpRequests',
             icon: <SiAxios/>,
         },
         {
             title: 'React Router',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque iure repellat vero!',
+            description: 'A JavaScript library that lets us handle client and server-side routing in React applications',
             icon: <SiReactrouter/>,
         },
         {
             title: 'Material UI',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque iure repellat vero!',
+            description: 'A comprehensive library of components that features implementation of Google\'s Material Design system',
             icon: <SiMui/>,
         },
         {
             title: 'React Hook Form',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque iure repellat vero!',
+            description: 'A library that helps validate forms in React. Reduces the amount of code need to write while removing unnecessary re-renders',
             icon: <SiReacthookform/>,
         },
         {
             title: 'Storybook',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque iure repellat vero!',
+            description: 'A frontend workshop for building UI components and pages in isolation',
             icon: <SiStorybook/>,
         },
         {
