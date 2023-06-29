@@ -26,19 +26,40 @@
       }
 
       & input, & textarea {
+        display: block;
         padding: 15px;
         width: 100%;
         height: auto;
-        @include text('Poppins', 12px, 1.5);
+        @include text('Poppins', 14px, 1.5);
         background-color: $backgroundSecondColor;
         border: 1px solid #4a4a4a;
         outline: none;
-        color: #495057;
+        color: #a4a4a4;
+        transition: box-shadow 0.3s;
+
+        &:focus {
+          border: 1px solid transparent;
+          box-shadow: 0 0 2px 1px $primaryColor;
+        }
       }
 
       & textarea {
         min-height: 160px;
         resize: vertical;
+      }
+
+      .error {
+        display: block;
+        margin-top: 4px;
+        @include text('Poppins', 0, 1.5);
+        color: #a60101;
+        opacity: 0;
+        transition: 0.3s;
+
+        &.visible {
+          font-size: 16px;
+          opacity: 1;
+        }
       }
 
       .button {

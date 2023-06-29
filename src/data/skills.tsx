@@ -7,7 +7,6 @@ import {
     SiMui,
     SiPostman,
     SiReact,
-    SiReacthookform,
     SiReactrouter,
     SiRedux,
     SiSass,
@@ -15,6 +14,7 @@ import {
     SiTypescript,
 } from 'react-icons/si';
 import {RiShieldCheckFill} from 'react-icons/ri';
+import {ReactComponent as ReactHookForm} from '../assets/icons/reactHookForm.svg';
 import React from 'react';
 
 export const skills = [
@@ -71,7 +71,7 @@ export const skills = [
     {
         title: 'React Hook Form',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque iure repellat vero!',
-        icon: <SiReacthookform/>,
+        icon: <ReactHookForm/>,
     },
     {
         title: 'Storybook',
