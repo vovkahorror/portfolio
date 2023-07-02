@@ -9,7 +9,7 @@ export const footerContacts = [
         title: 'vovkahorror',
     },
     {
-        link: '',
+        link: 'https://linkedin.com/in/volodymyr-yaremchak',
         icon: <SiLinkedin/>,
         title: 'LinkedIn',
     },

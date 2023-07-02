@@ -8,13 +8,13 @@ export const projects = [
         title: 'Connectify',
         description: 'The social network. You can create your profile, upload your photo, post messages, chat and private messages with other users.',
         image: connectifyImage,
-        link: 'https://vovkahorror.github.io/samurai-way/',
+        link: 'https://vovkahorror.github.io/connectify/',
     },
     {
         title: 'Your Task Guru',
         description: 'The purpose of the app is to help organize your goals and objectives. You can register to create and edit your own task lists.',
         image: yourTaskGuruImage,
-        link: 'https://vovkahorror.github.io/todolist/',
+        link: 'https://vovkahorror.github.io/your-task-guru/',
     },
     {
         title: 'Learning Cards',
