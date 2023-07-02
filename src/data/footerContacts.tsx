@@ -14,7 +14,7 @@ export const footerContacts = [
         title: 'LinkedIn',
     },
     {
-        link: 'mailto:vovkahorror@gmail.com',
+        link: 'mailto:v.yaremchak@gmail.com',
         icon: <SiGmail/>,
         title: 'vovkahorror@gmail.com',
     },
