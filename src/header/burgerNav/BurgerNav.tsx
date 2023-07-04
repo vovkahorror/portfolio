@@ -13,6 +13,7 @@ const BurgerNav: FC<BurgerNavPropsType> = ({isOpen, setIsOpen}) => {
         offset: -2,
         duration: 500,
         delay: 0,
+        isDynamic: true,
         onClick: toggleBurgerNav,
     };
 
