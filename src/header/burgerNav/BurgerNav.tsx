@@ -10,7 +10,7 @@ const BurgerNav: FC<BurgerNavPropsType> = ({isOpen, setIsOpen}) => {
         activeClass: styles.active,
         spy: true,
         smooth: true,
-        offset: -2,
+        offset: 2,
         duration: 500,
         delay: 0,
         isDynamic: true,
@@ -24,7 +24,7 @@ const BurgerNav: FC<BurgerNavPropsType> = ({isOpen, setIsOpen}) => {
                 <Rotate direction={'bottom-right'} duration={400} triggerOnce cascade damping={0.3}>
                     <ul className={styles.navList}>
                         <li><Link to="main" {...linkParams}>Main</Link></li>
-                        <li><Link to="skills" {...linkParams} offset={2}>Skills</Link></li>
+                        <li><Link to="skills" {...linkParams}>Skills</Link></li>
                         <li><Link to="projects" {...linkParams}>Projects</Link></li>
                         <li><Link to="contacts" {...linkParams}>Contacts</Link></li>
                     </ul>
