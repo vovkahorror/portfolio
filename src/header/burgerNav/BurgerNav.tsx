@@ -10,7 +10,7 @@ const BurgerNav: FC<BurgerNavPropsType> = ({isOpen, setIsOpen}) => {
         activeClass: styles.active,
         spy: true,
         smooth: true,
-        offset: -10,
+        offset: -2,
         duration: 500,
         delay: 0,
         isDynamic: true,

@@ -7,7 +7,7 @@ const Nav = () => {
         activeClass: styles.active,
         spy: true,
         smooth: true,
-        offset: -10,
+        offset: -2,
         duration: 500,
         delay: 0,
     };
