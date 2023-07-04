@@ -4,7 +4,9 @@ import Title from '../common/components/title/Title';
 import {Fade} from 'react-awesome-reveal';
 import {useInView} from 'react-intersection-observer';
 import {FieldError, SubmitHandler, useForm} from 'react-hook-form';
+import emailjs from '@emailjs/browser';
 import {validateEmail} from '../common/validate/validateEmail';
+import {publicKey, serviceID, templateID} from '../data/emailJSData';
 
 
 const Contacts = () => {
@@ -16,7 +18,15 @@ const Contacts = () => {
         handleSubmit,
     } = useForm<Inputs>();
 
-    const onSubmit: SubmitHandler<Inputs> = data => console.log(data);
+    const onSubmit: SubmitHandler<Inputs> = (data) => {
+        emailjs.send(serviceID, templateID, data, publicKey)
+            .then((result) => {
+                console.log(result.text);
+            })
+            .catch((error) => {
+                console.log(error.text);
+            });
+    };
 
     const errorClassName = (error?: FieldError) => {
         return `${styles.error} ${error ? styles.visible : ''}`;
