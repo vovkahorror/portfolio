@@ -38,8 +38,15 @@
   letter-spacing: 1px;
   border: none;
   background: transparent;
+  outline: none;
   cursor: pointer;
   z-index: 0;
+
+  &:disabled, &:disabled::after, &:disabled:hover::after {
+    opacity: 0.6;
+    pointer-events: none;
+    cursor: unset;
+  }
 
   &::after {
     content: "";
@@ -50,7 +57,7 @@
     margin: 0 auto;
     height: $underlineHeight;
     width: $underlineWidth;
-    background: #4e93e6;
+    background: $primaryColor;
     z-index: -1;
     transition: all 0.2s ease-in-out 0s;
   }
