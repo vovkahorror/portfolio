@@ -83,11 +83,6 @@ export const skills = {
             icon: <SiStorybook/>,
         },
         {
-            title: 'i18next',
-            description: 'An internationalization-framework, that provides a comprehensive set of tools and features to localize product',
-            icon: <SiI18Next/>,
-        },
-        {
             title: 'Postman',
             description: 'An API platform for building and using APIs, that simplifies each step of the API lifecycle and streamlines collaboration',
             icon: <SiPostman/>,
