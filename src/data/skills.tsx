@@ -2,7 +2,7 @@ import {
     SiAxios,
     SiCss3,
     SiGit,
-    SiHtml5,
+    SiHtml5, SiI18Next,
     SiJavascript,
     SiMui,
     SiPostman,
@@ -81,6 +81,11 @@ export const skills = {
             title: 'Storybook',
             description: 'A frontend workshop for building UI components and pages in isolation, that allows to create organized UI systems',
             icon: <SiStorybook/>,
+        },
+        {
+            title: 'i18next',
+            description: 'An internationalization-framework, that provides a comprehensive set of tools and features to localize product',
+            icon: <SiI18Next/>,
         },
         {
             title: 'Postman',
