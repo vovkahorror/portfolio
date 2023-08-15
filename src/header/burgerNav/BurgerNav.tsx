@@ -8,9 +8,9 @@ const BurgerNav: FC<BurgerNavPropsType> = ({isOpen, setIsOpen}) => {
 
     const linkParams = {
         activeClass: styles.active,
-        spy: true,
+        spy: false,
         smooth: true,
-        offset: -2,
+        offset: 0,
         duration: 500,
         delay: 0,
         isDynamic: true,
