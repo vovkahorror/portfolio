@@ -1,5 +1,5 @@
 import {
-    SiAxios,
+    SiAxios, SiCreatereactapp,
     SiCss3,
     SiGit,
     SiHtml5, SiI18Next,
@@ -21,6 +21,11 @@ export const skills = {
     mainStack: [
         {
             title: 'React',
+            description: 'A front-end JavaScript library for building user interfaces based on components, the core idea of which is the concept of a virtual DOM',
+            icon: <SiCreatereactapp/>,
+        },
+        {
+            title: 'React Native',
             description: 'A front-end JavaScript library for building user interfaces based on components, the core idea of which is the concept of a virtual DOM',
             icon: <SiReact/>,
         },
