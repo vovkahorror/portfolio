@@ -26,7 +26,7 @@ export const skills = {
         },
         {
             title: 'React Native',
-            description: 'A front-end JavaScript library for building user interfaces based on components, the core idea of which is the concept of a virtual DOM',
+            description: 'An UI software framework that used to develop cross-platform applications  for Android, iOS, Web and other platforms',
             icon: <SiReact/>,
         },
         {
