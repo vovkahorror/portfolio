@@ -93,7 +93,7 @@ const Main: FC<MainPropsType> = ({setIsLoaded}) => {
                         <h1>I am <br/> <span className={styles.name}>Volodymyr Yaremchak</span></h1>
                         <div className={styles.profession}>
                             <ReactTypingEffect
-                                text={['A Frontend Developer', 'A React Developer', 'A JavaScript Developer', 'A TypeScript Developer']}
+                                text={['A Frontend Developer', 'A React Developer', 'A React Native Developer', 'A JavaScript Developer', 'A TypeScript Developer']}
                                 speed={100}
                                 eraseSpeed={100}
                                 eraseDelay={3000}

@@ -14,8 +14,12 @@ const Projects = () => {
                 <Fade duration={1200} cascade triggerOnce damping={0.3}>
                     <ul className={styles.projects}>
                         {projects.map(project =>
-                            <Project key={v1()} title={project.title} description={project.description}
-                                     image={project.image} link={project.link}/>)}
+                            <Project key={v1()}
+                                     title={project.title}
+                                     description={project.description}
+                                     icon={project.icon}
+                                     image={project.image}
+                                     link={project.link}/>)}
                     </ul>
                 </Fade>
             </div>

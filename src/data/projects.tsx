@@ -2,6 +2,8 @@ import connectifyImage from '../assets/images/connectify.webp';
 import yourTaskGuruImage from '../assets/images/yourTaskGuru.webp';
 import learningCardsImage from '../assets/images/learningCards.webp';
 import momentum from '../assets/images/momentum.webp';
+import perfetto from '../assets/images/perfetto.webp';
+import {SiAndroid} from 'react-icons/si';
 
 export const projects = [
     {
@@ -27,5 +29,12 @@ export const projects = [
         description: 'Achieve your goals faster and more consistently with your own personal dashboard. Featuring to-do lists, weather, daily photos, and encouraging quotes.',
         image: momentum,
         link: 'https://vovkahorror.github.io/momentum/',
+    },
+    {
+        title: 'Perfetto',
+        description: 'The application contains comprehensive information about the entire model range and key features of De’Longhi coffee machines. Developed for the De’Longhi Ukraine company and designed to speed up the adaptation of new employees.',
+        image: perfetto,
+        icon: <SiAndroid/>,
+        link: 'https://www.dropbox.com/scl/fi/z5qch2y33ycfnqgna46lq/perfetto-1.0.apk?rlkey=0vav3kevc538wwg6bfp4kyc7r&dl=0&raw=1',
     },
 ];
