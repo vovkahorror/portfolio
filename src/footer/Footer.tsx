@@ -15,7 +15,7 @@ const Footer = () => {
                     {footerContacts.map(contact => <FooterContacts key={v1()} link={contact.link}
                                                                    icon={contact.icon}/>)}
                 </div>
-                <time className={styles.year} dateTime={String(currentYear)}>{currentYear}</time>
+                <time className={styles.year} dateTime={currentYear.toString()}>{currentYear}</time>
             </div>
         </footer>
     );
