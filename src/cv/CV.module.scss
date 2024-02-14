@@ -1,0 +1,28 @@
+@import '../common/styles/sass/mixins';
+
+.cvBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .cvContainer {
+    @include container();
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .documentWrapper {
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: zoom-in;
+  }
+
+  .button {
+    display: flex;
+    flex-wrap: nowrap;
+    @include button($underlineHeight: 4px);
+    margin: 0 auto;
+    color: #ffffff;
+    min-width: 0;
+  }
+}
