@@ -3,16 +3,21 @@ import Title from '../common/components/title/Title';
 import {Fade} from 'react-awesome-reveal';
 import React from 'react';
 import {Document, Page} from 'react-pdf';
-import {Button} from '@mui/material';
+import {Box, Button, Modal} from '@mui/material';
 import {FileDownload} from '@mui/icons-material';
+import resume from '../assets/documents/Volodymyr_Yaremchak_CV.pdf';
+import {ReactComponent as PreloaderImage} from '../assets/icons/preloader.svg';
 
 export const CV = () => {
-    const resumeUrl = 'https://www.dropbox.com/scl/fi/91rwzbse2mxltsy9x63hd/Volodymyr_Yaremchak_CV.pdf?rlkey=3hn3flcu7tsk8rx3s167y562a&dl=0&raw=1';
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
 
     const downloadFile = async () => {
         try {
-            const response = await fetch(resumeUrl);
+            const response = await fetch(resume);
             const blob = await response.blob();
+
             const url = URL.createObjectURL(blob);
 
             const element = document.createElement('a');
@@ -22,7 +27,7 @@ export const CV = () => {
             element.click();
             document.body.removeChild(element);
         } catch (error) {
-            console.error('File download error:', error);
+            console.error('Error downloading file:', error);
         }
     };
 
@@ -30,18 +35,40 @@ export const CV = () => {
         <section className={styles.cvBlock} id={'cv'}>
             <div className={styles.cvContainer}>
                 <Title>My CV</Title>
-                <Fade duration={1200} triggerOnce damping={0.3}>
-                    <div className={styles.documentWrapper}>
-                        <Document file={resumeUrl}>
-                            <Page pageNumber={1} renderAnnotationLayer={false} renderTextLayer={false}
-                                  width={400}/>
+                <div>
+                    <Fade duration={1200} triggerOnce damping={0.3}>
+                        <div className={styles.documentWrapper} onClick={handleOpen}>
+                            <Document file={resume} loading={<PreloaderImage/>}>
+                                <Page pageNumber={1} renderAnnotationLayer={false} renderTextLayer={false}
+                                      height={600}/>
+                            </Document>
+                        </div>
+                    </Fade>
+                    <Button endIcon={<FileDownload/>} className={styles.button} onClick={downloadFile}>
+                        Download
+                    </Button>
+                </div>
+
+                <Modal open={open} onClose={handleClose}>
+                    <Box sx={modalBoxStyle} onClick={handleClose}>
+                        <Document file={resume} loading={<PreloaderImage/>}>
+                            <Page pageNumber={1} renderAnnotationLayer={false} renderTextLayer={false}/>
                         </Document>
-                    </div>
-                </Fade>
-                <Button endIcon={<FileDownload/>} className={styles.button} onClick={downloadFile}>
-                    Download
-                </Button>
+                    </Box>
+                </Modal>
             </div>
         </section>
     );
+};
+
+const modalBoxStyle = {
+    position: 'absolute' as 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    p: 0,
+    borderRadius: '10px',
+    overflow: 'hidden',
+    cursor: 'zoom-out',
+    outline: 'none',
 };

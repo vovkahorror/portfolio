@@ -1,9 +1,7 @@
 @import '../common/styles/sass/mixins';
 
 .cvBlock {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex();
 
   .cvContainer {
     @include container();
@@ -21,8 +19,7 @@
     display: flex;
     flex-wrap: nowrap;
     @include button($underlineHeight: 4px);
-    margin: 0 auto;
-    color: #ffffff;
+    margin: 18px auto 0 auto;
     min-width: 0;
   }
 }
