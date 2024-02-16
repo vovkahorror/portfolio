@@ -7,7 +7,7 @@ import Projects from './projects/Projects';
 import Contacts from './contacts/Contacts';
 import Footer from './footer/Footer';
 import {Preloader} from './common/components/preloader/Preloader';
-import {CV} from './cv/CV';
+import {Cv} from './cv/Cv';
 
 function App() {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -19,7 +19,7 @@ function App() {
             <Main setIsLoaded={setIsLoaded}/>
             <Skills/>
             <Projects/>
-            <CV/>
+            <Cv/>
             <Contacts/>
             <Footer/>
         </div>
