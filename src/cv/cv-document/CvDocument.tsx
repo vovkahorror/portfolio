@@ -8,7 +8,7 @@ export const CvDocument = (props: CvDocumentPropsType) => {
     return (
         <Document file={resume} loading={<PreloaderImage/>}>
             <Page pageNumber={1} renderAnnotationLayer={false} renderTextLayer={false}
-                  height={mode === 'onPage' ? 600 : undefined}/>
+                  height={mode === 'onPage' ? 600 : undefined} loading={false}/>
         </Document>
     );
 };

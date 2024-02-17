@@ -4,6 +4,9 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {pdfjs} from 'react-pdf';
+import 'pdfjs-dist/build/pdf.worker.entry';
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import 'react-pdf/dist/esm/Page/TextLayer.css';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement,
