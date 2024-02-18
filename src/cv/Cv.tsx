@@ -37,7 +37,7 @@ export const Cv = () => {
                 <div>
                     <Fade duration={1200} triggerOnce damping={0.3}>
                         <div className={styles.documentWrapper} onClick={handleOpen}>
-                            <CvDocument mode={'onPage'}/>
+                            <CvDocument mode={'compact'}/>
                         </div>
                     </Fade>
                     <Button endIcon={<FileDownload/>} className={styles.button} onClick={downloadFile}>
