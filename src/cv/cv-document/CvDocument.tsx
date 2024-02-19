@@ -31,7 +31,13 @@ export const CvDocument = (props: CvDocumentPropsType) => {
 
     return (
         <Document file={resume} loading={<PreloaderImage/>}>
-            <Page pageNumber={1} width={pageWidth} loading={false}/>
+            <Page
+                pageNumber={1}
+                width={pageWidth}
+                loading={false}
+                renderTextLayer={false}
+                renderAnnotationLayer={false}
+            />
         </Document>
     );
 };
