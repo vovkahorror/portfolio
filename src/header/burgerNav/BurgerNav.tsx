@@ -26,6 +26,7 @@ const BurgerNav: FC<BurgerNavPropsType> = ({isOpen, setIsOpen}) => {
                         <li><Link to="main" {...linkParams}>Main</Link></li>
                         <li><Link to="skills" {...linkParams}>Skills</Link></li>
                         <li><Link to="projects" {...linkParams}>Projects</Link></li>
+                        <li><Link to="cv" {...linkParams}>My CV</Link></li>
                         <li><Link to="contacts" {...linkParams}>Contacts</Link></li>
                     </ul>
                 </Rotate>
