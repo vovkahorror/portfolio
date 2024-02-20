@@ -2,7 +2,7 @@ import styles from './Cv.module.scss';
 import Title from '../common/components/title/Title';
 import {Fade} from 'react-awesome-reveal';
 import React from 'react';
-import {Box, Button, Modal} from '@mui/material';
+import {Backdrop, Box, Button, Modal} from '@mui/material';
 import {FileDownload} from '@mui/icons-material';
 import resume from '../assets/documents/Volodymyr_Yaremchak_CV.pdf';
 import {CvDocument} from './cv-document/CvDocument';
@@ -45,7 +45,20 @@ export const Cv = () => {
                     </Button>
                 </div>
 
-                <Modal open={open} onClose={handleClose}>
+                <Modal
+                    aria-labelledby="transition-modal-title"
+                    aria-describedby="transition-modal-description"
+                    open={open}
+                    onClose={handleClose}
+                    keepMounted
+                    closeAfterTransition
+                    slots={{backdrop: Backdrop}}
+                    slotProps={{
+                        backdrop: {
+                            timeout: 500,
+                        },
+                    }}
+                >
                     <Box sx={modalBoxStyle} onClick={handleClose}>
                         <CvDocument mode={'fullScreen'}/>
                     </Box>
