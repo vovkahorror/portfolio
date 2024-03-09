@@ -15,6 +15,7 @@ import {
     SiTypescript,
 } from 'react-icons/si';
 import {RiShieldCheckFill} from 'react-icons/ri';
+import {FaExpandArrowsAlt} from 'react-icons/fa';
 import React from 'react';
 
 export const skills = {
@@ -91,6 +92,11 @@ export const skills = {
             title: 'i18next',
             description: 'An internationalization-framework, that provides a comprehensive set of tools and features to localize product',
             icon: <SiI18Next/>,
+        },
+        {
+            title: 'dnd kit',
+            description: 'A lightweight, modular, performant, accessible and extensible drag & drop toolkit for React',
+            icon: <FaExpandArrowsAlt/>,
         },
         {
             title: 'Postman',
