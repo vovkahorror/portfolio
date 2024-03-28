@@ -1,4 +1,3 @@
-import resume from '../../assets/documents/Volodymyr_Yaremchak_CV.pdf';
 import {Document, Page, pdfjs} from 'react-pdf';
 import {ReactComponent as PreloaderImage} from '../../assets/icons/preloader.svg';
 import 'pdfjs-dist/build/pdf.worker.entry';
@@ -13,7 +12,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 ).toString();
 
 export const CvDocument = (props: CvDocumentPropsType) => {
-    const {mode} = props;
+    const {mode, file} = props;
     const {width} = useScreenSize();
     const isMobile = width <= 576;
 
@@ -26,7 +25,7 @@ export const CvDocument = (props: CvDocumentPropsType) => {
     }, [mode, isMobile, width]);
 
     return (
-        <Document file={resume} loading={<PreloaderImage/>}>
+        <Document file={file} loading={<PreloaderImage/>}>
             <Page
                 pageNumber={1}
                 width={pageWidth}
@@ -39,5 +38,6 @@ export const CvDocument = (props: CvDocumentPropsType) => {
 };
 
 type CvDocumentPropsType = {
-    mode: 'compact' | 'fullScreen'
+    mode: 'compact' | 'fullScreen';
+    file: File;
 };

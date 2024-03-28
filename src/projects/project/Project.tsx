@@ -12,7 +12,7 @@ const Project: FC<ProjectPropsType> = ({title, description, icon, image, link}) 
                     <span className={styles.description}>{description}</span>
                 </div>
             </a>
-            <a href={link} target="_blank" className={styles.titleWrapper}>
+            <a href={link} target="_blank">
                 <h3 className={styles.projectTitle}>
                     <span className={styles.projectIcon}>{icon}</span>
                     {title}
