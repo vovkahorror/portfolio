@@ -1,20 +1,21 @@
+import React, {useEffect, useCallback, useState} from 'react';
 import styles from './Cv.module.scss';
-import Title from '../common/components/title/Title';
 import {Fade} from 'react-awesome-reveal';
-import React from 'react';
 import {Backdrop, Box, Button, Modal} from '@mui/material';
 import {FileDownload} from '@mui/icons-material';
 import resume from '../assets/documents/Volodymyr_Yaremchak_CV.pdf';
 import {CvDocument} from './cv-document/CvDocument';
+import Title from '../common/components/title/Title';
 
-export const Cv = () => {
-    const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+export const Cv = ({setIsLoaded}: CvPropsType) => {
+    const [open, setOpen] = useState(false);
 
-    const downloadFile = async (file: URL) => {
+    const handleOpen = useCallback(() => setOpen(true), []);
+    const handleClose = useCallback(() => setOpen(false), []);
+
+    const downloadFile = useCallback(async (fileUrl: URL) => {
         try {
-            const response = await fetch(file);
+            const response = await fetch(fileUrl);
             const blob = await response.blob();
 
             const url = URL.createObjectURL(blob);
@@ -28,7 +29,24 @@ export const Cv = () => {
         } catch (error) {
             console.error('Error downloading file:', error);
         }
-    };
+    }, []);
+
+    useEffect(() => {
+        const fetchResume = async () => {
+            try {
+                const response = await fetch(resume);
+                const blob = await response.blob();
+                const reader = new FileReader();
+
+                reader.readAsDataURL(blob);
+                reader.onload = () => setIsLoaded(true);
+            } catch (error) {
+                console.error('Error fetching or reading file:', error);
+            }
+        };
+
+        fetchResume();
+    }, [setIsLoaded]);
 
     return (
         <section className={styles.cvBlock} id={'cv'}>
@@ -79,3 +97,7 @@ const modalBoxStyle = {
     cursor: 'zoom-out',
     outline: 'none',
 };
+
+interface CvPropsType {
+    setIsLoaded: (isLoaded: boolean) => void;
+}

@@ -16,10 +16,10 @@ function App() {
         <div className="App">
             {!isLoaded && <Preloader/>}
             <Header/>
-            <Main setIsLoaded={setIsLoaded}/>
+            <Main/>
             <Skills/>
             <Projects/>
-            <Cv/>
+            <Cv setIsLoaded={setIsLoaded}/>
             <Contacts/>
             <Footer/>
         </div>
