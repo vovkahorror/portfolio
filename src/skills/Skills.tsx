@@ -17,8 +17,9 @@ const Skills = () => {
                     </Zoom>
                     <Fade duration={800} cascade triggerOnce damping={0.2}>
                         <ul className={styles.skills}>
-                            {skills.mainStack.map(skill => <Skill key={v1()} title={skill.title}
-                                                                  description={skill.description} icon={skill.icon}/>)}
+                            {skills.mainStack.map(skill =>
+                                <Skill key={v1()} title={skill.title} description={skill.description}
+                                       icon={skill.icon}/>)}
                         </ul>
                     </Fade>
                 </div>
@@ -28,9 +29,9 @@ const Skills = () => {
                     </Zoom>
                     <Fade duration={800} cascade triggerOnce damping={0.2}>
                         <ul className={styles.skills}>
-                            {skills.assistiveTechnologies.map(skill => <Skill key={v1()} title={skill.title}
-                                                                              description={skill.description}
-                                                                              icon={skill.icon}/>)}
+                            {skills.assistiveTechnologies.map(skill =>
+                                <Skill key={v1()} title={skill.title} description={skill.description}
+                                       icon={skill.icon}/>)}
                         </ul>
                     </Fade>
                 </div>

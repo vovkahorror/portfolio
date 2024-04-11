@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC, useEffect} from 'react';
 import styles from './Main.module.scss';
 import photo from '../assets/images/photo.jpg';
 import Particles from 'react-particles';
@@ -10,7 +10,7 @@ import ReactTypingEffect from 'react-typing-effect';
 import {Tilt} from 'react-tilt';
 import {loadSlim} from 'tsparticles-slim';
 
-const Main = () => {
+const Main: FC<MainPropsType> = ({setIsLoaded}) => {
     const customInit = async (engine: Engine) => {
         await loadSlim(engine);
         await loadLinksPreset(engine);
@@ -70,6 +70,19 @@ const Main = () => {
         max: 10,
     };
 
+    useEffect(() => {
+        const image = new Image();
+        image.src = photo;
+
+        image.onload = () => {
+            setIsLoaded(true);
+        };
+
+        return () => {
+            image.onload = null;
+        };
+    }, []);
+
     return (
         <section className={styles.mainBlock} id={'main'}>
             <Particles options={particlesOptions} init={customInit} className={styles.particles}/>
@@ -100,5 +113,9 @@ const Main = () => {
         </section>
     );
 };
+
+type MainPropsType = {
+    setIsLoaded: (isLoaded: boolean) => void;
+}
 
 export default Main;
