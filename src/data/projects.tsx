@@ -35,6 +35,6 @@ export const projects = [
         description: 'The application contains comprehensive information about the entire model range and key features of De’Longhi coffee machines. Developed for the De’Longhi Ukraine company and designed to speed up the adaptation of new employees.',
         image: perfetto,
         icon: <SiAndroid/>,
-        link: 'https://www.dropbox.com/scl/fi/tspuhw3fc43nx3u374gpl/perfetto-1.2.apk?rlkey=tvocqeayhpz0ckdwyhmavbj7v&st=eul3ui4e&dl=0&raw=1',
+        link: 'https://www.dropbox.com/scl/fi/z0a5shhjrrbtg0ig1uqxp/perfetto-1.2.1.apk?rlkey=bukn7s3e5d8nnwe1qi8nxk6f4&st=o8xaqyq6&dl=0&raw=1',
     },
 ];
