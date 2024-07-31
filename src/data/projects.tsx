@@ -1,3 +1,4 @@
+import brainShockImage from '../assets/images/brainShock.webp';
 import connectifyImage from '../assets/images/connectify.webp';
 import yourTaskGuruImage from '../assets/images/yourTaskGuru.webp';
 import learningCardsImage from '../assets/images/learningCards.webp';
@@ -6,6 +7,12 @@ import perfetto from '../assets/images/perfetto.webp';
 import {SiAndroid} from 'react-icons/si';
 
 export const projects = [
+    {
+        title: 'BrainShock',
+        description: 'The social network. You can create your profile, upload your photo, post messages, chat and private messages with other users.',
+        image: brainShockImage,
+        link: 'https://brainshock.shop/',
+    },
     {
         title: 'Connectify',
         description: 'The social network. You can create your profile, upload your photo, post messages, chat and private messages with other users.',
