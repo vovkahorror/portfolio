@@ -9,7 +9,7 @@ import {SiAndroid} from 'react-icons/si';
 export const projects = [
     {
         title: 'BrainShock',
-        description: 'The social network. You can create your profile, upload your photo, post messages, chat and private messages with other users.',
+        description: 'A commercially successful store for Nintendo Switch consoles. Users have the opportunity to choose and order the desired console.',
         image: brainShockImage,
         link: 'https://brainshock.shop/',
     },
