@@ -8,7 +8,7 @@ import {PhotoProvider, PhotoView} from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 
 export const Cv = () => {
-    const cvLink = 'https://www.dropbox.com/scl/fi/ayt8qf3jrhtfvt7gi4g0c/Volodymyr_Yaremchak_CV.pdf?rlkey=qhuius4jvtxn7ekhl8a5qb3r0&st=amwvxdjl&dl=0&raw=1';
+    const cvLink = 'https://www.dropbox.com/scl/fi/91vu9aq7uk84ki4xizi2m/Volodymyr_Yaremchak_CV.pdf?rlkey=82n55v6req1yyogbuvcdvl796&st=64eqtk7v&dl=0&raw=1';
 
     return (
         <section className={styles.cvBlock} id={'cv'}>
